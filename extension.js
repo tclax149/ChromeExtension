@@ -4,20 +4,22 @@ let myLeads = [];
 const inputButton = document.getElementById("input-button");
 const inputElement = document.getElementById("input-element");
 const unorderedListEl = document.getElementById("unorderedList");
+let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
-localStorage.setItem("myLeads", "www.exampleLead.com")
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
 
-
-
-inputButton.addEventListener("click", function(){
+inputButton.addEventListener("click", function() {
     myLeads.push(inputElement.value)
-    renderLeads();
-    inputElement.value = "";
+    inputElement.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    renderLeads()
 })
 
-function renderLeads(){
+function renderLeads() {
 let listItems = ""
-
 for (let i = 0; i < myLeads.length; i++) {
  listItems += `
     <li>
