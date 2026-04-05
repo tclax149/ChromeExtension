@@ -8,29 +8,45 @@
 </head>
 
 <body>
-    <div class="title-row">
-        <label id="title">Read With Coffee</label>
+    <header class="title-row">
+        <h1 id="title">Read With Coffee</h1>
         <img src="4.png" class="title-icon">
-    </div>
-    <input type="text" id="title-element" placeholder="Entire Title">
-    <input type="text" placeholder="Please enter url" id="input-element">
-    <input type="text" placeholder="Enter notes" id="notes-element">
-    <button id="input-button">Save Input</button>
-    <button id="save-tab">Save Tab</button>
-    <button id="delete-button">Delete All</button>
-    <div id="note-modal" class="modal hidden">
-        <div class="modal-content">
-            <label for="tab-title-input" class="modal-title">Add details for this tab</label>
-            <input type="text" id="tab-title-input" placeholder="Enter Title">
-            <input type="text" id="tab-note-input" placeholder="Enter Note">
-            <div class="modal-actions">
-                <button id="cancel-note">Cancel</button>
-                <button id="confirm-save-tab">Save Tab</button>
-            </div>
+    </header>
+
+    <main>
+        <section id="action-section">
+            <label for="title-element">Name Bookmark</label>
+            <input type="text" id="title-element" placeholder="Entire Title">
+
+            <label for="input-element"> Save Site </label>
+            <input type="text" placeholder="Please enter url" id="input-element">
+
+            <label for="input-element"> Add Notes </label>
+            <input type="text" placeholder="Enter notes" id="notes-element">
+
+            <button id="input-button">Save Input</button>
+            <button id="save-tab">Save Tab</button>
+            <button id="delete-button">Delete All</button>
+        </section>
+
+        <div id="note-modal" class="modal hidden">
+            <dialog class="modal-content">
+                <label for="tab-title-input" class="modal-title">Add details for this tab</label>
+                <input type="text" id="tab-title-input" placeholder="Enter Title">
+
+                <label for="tab-note-input" class="modal-title">Add Notes</label>
+                <input type="text" id="tab-note-input" placeholder="Enter Note">
+
+                <div class="modal-actions">
+                    <button id="cancel-note">Cancel</button>
+                    <button id="confirm-save-tab">Save Tab</button>
+                </div>
+
+            </dialog>
         </div>
-    </div>
-    <ul id="unorderedList"></ul>
-</body>
+        <ul id="unorderedList"></ul>
+    </main>
+
 
 
 </html>
