@@ -1,5 +1,7 @@
 # ChromeExtension
 
+Bookmark Morning Reading using a chrome extension
+
 For this project, the coding style focused on writing clean, readable, and organized code so the extension would be easier to build, debug, and improve over time. The structure separates HTML for layout, CSS for styling, and JavaScript for functionality, which keeps each file focused on a single purpose. Variable names were written clearly and descriptively, such as saveTabButton, notesElement, and confirmSaveTabButton, so the logic is easier to follow. Reusable functions like renderLeads() help avoid repeating the same code and make updates more efficient.
 
 Best practices included using event listeners to manage user interactions, storing data in a consistent object structure, and keeping UI updates tied directly to state changes in localStorage. The project also follows a user-centered approach by validating input, using modals for added context, and providing a cleaner visual hierarchy for saved items. As the extension grows, best practices would also include reducing duplicated logic, improving error handling, using extension-friendly storage like chrome.storage, and maintaining consistent formatting and naming conventions throughout the codebase.
